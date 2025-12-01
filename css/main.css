@@ -12,6 +12,11 @@
 
 body {
   background: #f5f5f5;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 nav {
@@ -499,7 +504,8 @@ header .header-content button {
 
 .S2al-Mjarrib img {
   width: 100%;
-  display: hidden;
+  /* display: hidden; - invalid css */
+  display: block;
 }
 
 .S2al-Mjarrib .testimonial-card {
@@ -1541,5 +1547,61 @@ footer .contact p {
 
   .S2al-content .first-p {
     margin-bottom: 15px;
+  }
+}
+
+/* New Responsive Fixes for S2al-Mjarrib Section */
+@media (max-width: 992px) {
+  .S2al-Mjarrib {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    background-color: #00556f; /* Fallback background */
+    position: relative;
+  }
+
+  .S2al-Mjarrib img {
+    display: none; /* Hide the large background image on mobile/tablet to avoid layout issues */
+  }
+
+  .S2al-content {
+    position: static;
+    width: 90%;
+    margin: 40px auto 20px auto;
+    text-align: center;
+  }
+
+  .S2al-content h2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .S2al-content p {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  }
+
+  /* Reset box positions to static for stacking */
+  .box {
+    position: static;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 350px;
+    height: auto;
+    min-height: 200px;
+    /* Remove the complex clip-path on mobile if it causes issues, or keep it */
+  }
+
+  .box1,
+  .box2,
+  .box3,
+  .box4 {
+    position: static;
+    margin: 20px auto;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
   }
 }

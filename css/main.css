@@ -21,7 +21,7 @@ nav {
   left: 0;
   background: linear-gradient(rgba(0, 242, 119, 0.7), rgba(0, 0, 0, 0));
   padding: 15px 20px;
-  height: 50vh;
+  /* height: 50vh; */
   z-index: 999;
 }
 
@@ -485,7 +485,7 @@ header .header-content button {
 .S2al-Mjarrib img {
   width: 100%;
   display: block;
-  display: flex;
+  /* display: flex;
   background-image: url("../image/Image-Website-2 1.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -494,7 +494,7 @@ header .header-content button {
   align-items: center;
   padding: 30px;
   position: relative;
-  width: 100%;
+  width: 100%; */
 }
 
 .S2al-Mjarrib img {

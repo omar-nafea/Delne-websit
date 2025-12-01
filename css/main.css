@@ -143,7 +143,7 @@ header .header-content button {
 
 /* Section styling */
 #from-plumber {
-  padding: 50px 20px;
+  padding: 60px 20px;
   background-color: #064055;
   color: #fff;
 }
@@ -175,6 +175,41 @@ header .header-content button {
 .section-header p span {
   display: block;
   font-weight: 700;
+}
+
+/* Mobile Section Header */
+@media (max-width: 768px) {
+  .section-header {
+    margin-bottom: 40px;
+    padding: 0 10px;
+  }
+
+  .section-header h1 {
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+    margin-bottom: 15px;
+  }
+
+  .section-header p {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-header {
+    margin-bottom: 30px;
+  }
+
+  .section-header h1 {
+    font-size: 2rem;
+    line-height: 2.3rem;
+  }
+
+  .section-header p {
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
 }
 
 /* Cards container */
@@ -782,7 +817,7 @@ header .header-content button {
 
 .app-section {
   text-align: center;
-  padding: 40px 0 80px;
+  padding: 60px 20px 80px;
   background: linear-gradient(#f2fef8, #43f69b);
   color: #003c3c;
 }
@@ -974,7 +1009,48 @@ transform: scale(2.2) rotate(45deg);
 @media (max-width: 900px) {
   .phones {
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
+    align-items: center;
+  }
+}
+
+/* Mobile App Section Enhancement */
+@media (max-width: 768px) {
+  .app-section {
+    padding: 50px 20px 60px;
+  }
+
+  .top-text h1 {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 20px;
+  }
+
+  .top-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 0 10px;
+  }
+
+  .bottom-text h2 {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 30px;
+  }
+
+  .bottom-text p {
+    font-size: 16px;
+    padding: 0 20px;
+  }
+
+  .store-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .store-buttons img {
+    width: 180px;
   }
 }
 
@@ -1201,8 +1277,12 @@ footer .contact p {
 /* Mobile Devices */
 @media (max-width: 576px) {
   header {
-    height: auto;
-    padding: 20px 15px;
+    height: 100vh;
+    min-height: 500px;
+    padding: 80px 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   header .header-content {
@@ -1210,24 +1290,26 @@ footer .contact p {
     bottom: auto;
     left: auto;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 0;
+    width: 100%;
   }
 
   header .header-content h2 {
-    font-size: 28px;
-    line-height: 32px;
-  }
-
-  header .header-content p {
-    font-size: 16px;
-    line-height: 20px;
-    width: 100%;
+    font-size: 36px;
+    line-height: 42px;
     margin-bottom: 20px;
   }
 
+  header .header-content p {
+    font-size: 18px;
+    line-height: 24px;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
   header .header-content button {
-    font-size: 20px;
-    padding: 8px 12px;
+    font-size: 24px;
+    padding: 12px 24px;
   }
 
   .top {
@@ -1556,9 +1638,10 @@ footer .contact p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 50px;
+    padding: 50px 20px 60px;
     background-color: #00556f; /* Fallback background */
     position: relative;
+    min-height: auto;
   }
 
   .S2al-Mjarrib img {
@@ -1568,29 +1651,34 @@ footer .contact p {
   .S2al-content {
     position: static;
     width: 90%;
-    margin: 40px auto 20px auto;
+    margin: 0 auto 40px auto;
     text-align: center;
   }
 
   .S2al-content h2 {
     font-size: 2rem;
     line-height: 2.5rem;
+    margin-bottom: 20px;
   }
 
   .S2al-content p {
     font-size: 1.1rem;
-    line-height: 1.5rem;
+    line-height: 1.6rem;
+  }
+
+  .S2al-content .first-p {
+    margin-bottom: 20px;
   }
 
   /* Reset box positions to static for stacking */
   .box {
     position: static;
-    margin: 20px auto;
+    margin: 25px auto;
     width: 90%;
     max-width: 350px;
     height: auto;
-    min-height: 200px;
-    /* Remove the complex clip-path on mobile if it causes issues, or keep it */
+    min-height: 180px;
+    padding: 20px;
   }
 
   .box1,
@@ -1598,10 +1686,47 @@ footer .contact p {
   .box3,
   .box4 {
     position: static;
-    margin: 20px auto;
+    margin: 25px auto;
     left: auto;
     right: auto;
     top: auto;
     bottom: auto;
+  }
+}
+
+/* Extra Mobile Polish for Cards Section */
+@media (max-width: 768px) {
+  #from-plumber {
+    padding: 50px 15px;
+  }
+
+  .cards-container {
+    gap: 30px;
+    padding: 0 10px;
+  }
+
+  .card {
+    min-width: 280px;
+    padding: 25px;
+  }
+
+  .card.Service {
+    transform: translateY(0);
+    margin-bottom: 10px;
+  }
+
+  .card.Communicate {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 576px) {
+  .cards-container {
+    width: 95%;
+  }
+
+  .card {
+    min-width: 100%;
+    max-width: 100%;
   }
 }

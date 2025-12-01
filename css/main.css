@@ -189,7 +189,7 @@ header .header-content button {
   flex: 1 1 245px;
   min-width: 245px;
   max-width: 350px;
-  height: 400px;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -398,21 +398,13 @@ header .header-content button {
   position: relative;
   clip-path: polygon(
     0 0,
-
     0 20%,
-
     15% 20%,
-
     15% 10%,
-
     30% 10%,
-
     30% 0,
-
     100% 0,
-
     100% 100%,
-
     0 100%
   );
   transform: translateY(-40px);
@@ -484,6 +476,7 @@ header .header-content button {
 } */
 
 /* --------------------S2al Mjarrib !------------------------- */
+/* --------------------S2al Mjarrib !------------------------- */
 .S2al-Mjarrib {
   position: relative;
   width: 100%;
@@ -492,6 +485,93 @@ header .header-content button {
 .S2al-Mjarrib img {
   width: 100%;
   display: block;
+  display: flex;
+  background-image: url("../image/Image-Website-2 1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  align-items: center;
+  padding: 30px;
+  position: relative;
+  width: 100%;
+}
+
+.S2al-Mjarrib img {
+  width: 100%;
+  display: hidden;
+}
+
+.S2al-Mjarrib .testimonial-card {
+  width: 240px;
+  height: 175px;
+  padding: 20px;
+
+  backdrop-filter: blur(18px);
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 242, 119, 0.2),
+    rgba(0, 242, 119, 0.2)
+  );
+
+  color: white;
+}
+
+.S2al-Mjarrib .testimonial-card1 {
+  width: 240px;
+  height: 175px;
+  padding: 20px;
+
+  backdrop-filter: blur(18px);
+  position: absolute;
+  top: 20%;
+  left: 55%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 242, 119, 0.2),
+    rgba(0, 242, 119, 0.2)
+  );
+
+  color: white;
+}
+
+.S2al-Mjarrib .testimonial-card2 {
+  width: 240px;
+  height: 175px;
+  padding: 20px;
+
+  backdrop-filter: blur(18px);
+  position: absolute;
+  top: 50%;
+  right: 45%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 242, 119, 0.2),
+    rgba(0, 242, 119, 0.2)
+  );
+
+  color: white;
+}
+
+.S2al-Mjarrib .testimonial-card3 {
+  width: 240px;
+  height: 175px;
+  padding: 20px;
+
+  backdrop-filter: blur(18px);
+  position: absolute;
+  bottom: 5%;
+  right: 25%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 242, 119, 0.2),
+    rgba(0, 242, 119, 0.2)
+  );
+
+  color: white;
 }
 
 /* خلي اللي فوق الصورة absolute بالنسبة للـ section */
@@ -741,6 +821,28 @@ header .header-content button {
 
 .phone1 {
   position: relative;
+  display: inline-block;
+}
+.phone1-content {
+  position: absolute;
+  top: 10%;
+  left: 2%;
+  background-color: #eff6f5;
+  padding: 5px;
+  border-radius: 5%;
+}
+
+.phone1-content span {
+  font-size: 10px;
+  display: flex;
+  margin-bottom: 10px;
+  color: var(--main-color);
+}
+.phone1-content h3 {
+  font-weight: 900;
+  width: 220px;
+  color: var(--main-color);
+  margin-bottom: 10px;
 }
 
 .phone1-content {
@@ -875,7 +977,6 @@ footer {
   background: #163a56;
   padding: 40px;
   color: #fff;
-  margin-top: 30px;
 }
 
 footer .footer-flex {
@@ -1266,22 +1367,179 @@ footer .contact p {
   }
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+/* navbar  */
+/* Toggle Button */
+.menu-btn {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+/* Navbar responsive */
+/* Hamburger styles */
+.hamburger {
+  display: none;
+
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--main-color);
+  border-radius: 2px;
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  ul {
+    display: none;
+
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--second-color);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 15px 0;
+    gap: 10px;
+    z-index: 999;
+  }
+
+  ul.show {
+    display: flex;
+  }
+
+  ul li a {
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 100%;
+  }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+/* footer responsive */
+@media (max-width: 576px) {
+  footer .footer-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+  }
+
+  footer .social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+
+  footer .social-icons i {
+    font-size: 30px;
+    margin-right: 15px;
+  }
+
+  footer .footer-links a {
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+  }
+
+  footer .logo-footer {
+    width: 150px;
+    height: auto;
+  }
+
+  footer .logo-footer img {
+    width: 50%;
+  }
+
+  footer .contact a,
+  footer .contact p {
+    font-size: 0.9375rem;
+    line-height: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  footer .footer-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 35px;
+  }
+
+  footer .footer-links a {
+    font-size: 1.25rem;
+  }
+
+  footer .logo-footer {
+    width: 180px;
+  }
+}
+
+@media (max-width: 992px) {
+  footer .footer-flex {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    text-align: center;
+  }
+
+  footer .logo-footer {
+    width: 200px;
+  }
+}
+
+/*  --------------S2al-Mjarrib responsive------------- */
+
+@media (max-width: 1100px) {
+  .S2al-content h2 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+    color: var(--second-color);
+    margin-bottom: 3px;
+  }
+
+  .S2al-content span {
+    display: block;
+  }
+
+  .S2al-content p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .S2al-content .first-p {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 600px) {
+  .S2al-content h2 {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 20px;
+    color: var(--second-color);
+    margin-bottom: 3px;
+  }
+
+  .S2al-content span {
+    display: block;
+  }
+
+  .S2al-content p {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 16px;
+  }
+
+  .S2al-content .first-p {
+    margin-bottom: 15px;
+  }
 }

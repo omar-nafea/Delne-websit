@@ -577,6 +577,181 @@ color: var(--second-color);
         margin-bottom: 50px;
     }
 }
+
+
+/* ----------------App----------------- */
+
+.app-section {
+    text-align: center;
+    padding: 40px 0 80px;
+    background: linear-gradient(#F2FEF8, #43F69B);
+    color: #003c3c;
+}
+
+/* --- Top Text --- */
+.top-text h1 {
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 45px;
+}
+
+.top-text p {
+    font-weight: 400;
+
+    font-size: 18px;
+   
+    line-height: 1.2;
+    max-width: 530px;
+    margin: auto;
+    color: var(--main-color);
+}
+.top-text p span{
+    font-weight: 700;
+}
+
+/* --- Phones --- */
+.phones {
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.phone {
+    width: 240px;
+    height: auto;
+    filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.2));
+    border-radius: 35px;
+}
+
+.phone1{
+    position: relative;
+}
+.phone1-content{
+    position: absolute;
+    top: 60px ;
+    left: 5px;
+    background-color: #EFF6F5;
+    padding: 5px;
+border-radius: 5%;
+}
+.phone1-content span{
+
+font-size: 10px;
+display: flex;
+margin-bottom: 10px;
+color: var(--main-color);
+}
+.phone1-content h3{
+    font-weight: 900;
+    width: 220px;
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+
+.phone1-content input{
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+}
+.search-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.search-wrapper input {
+    width: 100%;
+    padding-left: 35px;
+    /* مساحة للأيقونة */
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-wrapper i {
+    position: absolute;
+    left: 10px;
+    /* المسافة من الشمال */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+.search-wrapper input::placeholder {
+    font-size: 10px;
+    /* الحجم اللي تحبيه */
+    color: #999;
+    /* اختياري لتغيير اللون */
+}
+/* --- Dots --- */
+/* .dots {
+    margin-top: 10px;
+}
+
+.dots .arrow {
+transform: scale(2.2) rotate(45deg);
+
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-top: 5px solid var(--main-color);
+
+    border-right: 5px solid var(--main-color);
+}
+.dots .arrow2{
+    transform: scale(2.2) rotate(-90deg);
+    
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-top: 1px solid var(--main-color);
+    
+        border-right: 1px solid var(--main-color);
+    }
+
+
+.dot.active {
+    background: #007b6d;
+} */
+
+/* --- Bottom Text --- */
+.bottom-text h2 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 50px;
+    line-height: 50px;
+}
+
+.bottom-text p {
+    font-size: 20px;
+    max-width: 350px;
+    margin: auto;
+    font-weight: 400;
+    
+}
+
+/* --- Store Buttons --- */
+.store-buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.store-buttons img {
+    width: 150px;
+    cursor: pointer;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+    .phones {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
 /* ---------------- FOOTER ---------------- */
 footer {
     background: #163a56;
@@ -856,3 +1031,140 @@ footer .contact p {
 
 
 /* --------------------card responsive--------------- */
+/* Navbar responsive */
+/* Hamburger styles */
+.hamburger {
+    display: none;
+
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--main-color);
+    border-radius: 2px;
+}
+
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    ul {
+        display: none;
+
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--second-color);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 15px 0;
+        gap: 10px;
+        z-index: 999;
+    }
+
+    ul.show {
+        display: flex;
+
+    }
+
+    ul li a {
+        padding: 10px 20px;
+        font-size: 16px;
+        width: 100%;
+    }
+}
+
+/* footer responsive */
+@media (max-width: 576px) {
+    footer .footer-flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+    }
+
+    footer .social-icons {
+        display: flex;
+        flex-direction: column;
+        gap: .625rem;
+    }
+
+    footer .social-icons i {
+        font-size: 30px;
+        margin-right: 15px;
+    }
+
+    footer .footer-links a {
+        font-size: .75rem;
+        margin-bottom: 10px;
+    }
+
+    footer .logo-footer {
+        width: 150px;
+        height: auto;
+    }
+
+    footer .logo-footer img {
+        width: 50%;
+    }
+
+    footer .contact a,
+    footer .contact p {
+        font-size: .9375rem;
+        line-height: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    footer .footer-flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 35px;
+    }
+
+    footer .footer-links a {
+        font-size: 1.25rem;
+    }
+
+    footer .logo-footer {
+        width: 180px;
+    }
+}
+
+@media (max-width: 992px) {
+    footer .footer-flex {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        text-align: center;
+    }
+
+    footer .logo-footer {
+        width: 200px;
+    }
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
